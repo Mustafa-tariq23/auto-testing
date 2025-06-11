@@ -17,13 +17,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        cache: 'npm'
     
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v1
+
     - name: Install dependencies
-      run: npm ci
+      run: bun install
     
     - name: Run unit tests
-      run: npm test
+      run: bun test
     
     - name: Run Playwright tests
       run: npx playwright test
@@ -32,7 +34,7 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
-        npm run test:ai
+        bun run test:ai
     
     - name: Run CodeQL Analysis
       uses: github/codeql-action/init@v2
@@ -58,13 +60,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        cache: 'npm'
     
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v1
+
     - name: Install dependencies
-      run: npm ci
+      run: bun install
     
     - name: Build
-      run: npm run build
+      run: bun run build
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
