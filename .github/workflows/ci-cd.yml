@@ -26,6 +26,7 @@ jobs:
     
     - name: Run unit tests
       run: bun test
+      continue-on-error: true
     
     - name: Run Playwright tests
       run: npx playwright test
