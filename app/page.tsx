@@ -1,3 +1,4 @@
+import React from 'react'
 import { DashboardHeader } from "@/components/dashboard-header"
 import { DashboardShell } from "@/components/dashboard-shell"
 import { VulnerabilityDashboard } from "@/components/vulnerability-dashboard"
