@@ -11,7 +11,11 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
-    "test:ai": "ts-node scripts/run-ai-tests.ts"
+    "test:ai": "ts-node scripts/run-ai-tests.ts",
+    "test:unit": "jest",
+    "test:all": "npm run test:unit && npm run test:e2e",
+    "test:jest": "jest",
+    "test:playwright": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -79,6 +83,11 @@
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "babel-jest": "^29.7.0",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3"
   }
 }
