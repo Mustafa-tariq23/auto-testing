@@ -11,7 +11,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
-    "test:ai": "ts-node scripts/run-ai-tests.ts",
+    "test:ai": "ts-node --esm scripts/run-ai-tests.ts",
     "test:unit": "jest",
     "test:all": "npm run test:unit && npm run test:e2e",
     "test:jest": "jest",
